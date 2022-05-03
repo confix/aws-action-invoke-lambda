@@ -1,0 +1,16 @@
+name: "Invoke Lambda Function"
+description: "Invokes an AWS Lambda Function"
+
+inputs:
+  function-name:
+    required: true
+    description: "Name of the function"
+  function-version:
+    required: false
+    description: "Version of the function to invoke"
+outputs:
+  result:
+    description: "The deserialized response payload"
+runs:
+  using: "node16"
+  main: "dist/index.js"
